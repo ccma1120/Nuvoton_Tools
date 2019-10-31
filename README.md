@@ -4,7 +4,7 @@
 [ICPTool and ISPTool](https://www.nuvoton.com/hq/support/tool-and-software/software/programmer/?__locale=en)
 # Nu-Link2 open platform
 ## Open source firmware
-[DAPLink on Nu-Link2](./DapLink)   
+[DAPLink on Nu-Link2](#Nuvoton_Tools/DapLink)   
 [ISP bridge](https://github.com/OpenNuvoton/NuLink2_ISP_Bridge)    
 [ICP library](https://github.com/OpenNuvoton/NuLink2_ICP_Library)
 ## On chip debugging
