@@ -3,8 +3,8 @@
 # Programmer
 [ICPTool and ISPTool](https://www.nuvoton.com/hq/support/tool-and-software/software/programmer/)
 # Nu-Link2 debugging and programming adapter
-The role of Nu-Link2 adapter 
-#![img](img\nulink2.JPG)
+![The role of Nu-Link2 adapter](img/nulink2.PNG)
+
 
 
 NuLink2FW.bin
