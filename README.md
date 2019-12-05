@@ -26,39 +26,39 @@ NuTool: Coding assistant
 # Nu-Link2 debugging and programming adapter
 When using debugger and programmer tool above, you need an USB apatper. 
 We introduce you a new feature-rich Nu-Link2 adapter here.
-## The role of Nu-Link2 adapter
+### The role of Nu-Link2 adapter
 ![](img/nulink2.PNG)
 
 All Nu-Link2 firmware image (.bin files) can be found [here](./Latest_NuLink_Firmware)
 
-### NuLink2FW.bin
+#### NuLink2FW.bin
 - Proprietary code (most of Nu-Link2 firmware are open source except NuLink2FW.bin)
 - USB interfaces HID(proprietary commands)/MSC/VCOM 
 - Support NuMicro 8051, NuMicro specific features (config0/config1 dataflash setting, KPROM, etc.), unlimited flash break points, offline programming, user code protection
 
-### NuLink2_DAPLink.bin
+#### NuLink2_DAPLink.bin
 - This is the latest image built from [DAPLink on Nu-Link2](../../../DapLink)
 - USB interfaces HID(CMSIS-DAP)/MSC/VCOM 
 - Support many 3rd party IDE
 
-### NuLink2_CMSIS_DAP.bin
+#### NuLink2_CMSIS_DAP.bin
 - This is the latest image built from [CMSIS-DAP on Nu-Link2](../../../NuLink2_CMSIS_DAP)
 - If you don't need rich features of DAPLink, this is the light weight choice of CMSIS-DAP firmware.
 
-### NuLink2_ISP_Bridge_FW.bin
+#### NuLink2_ISP_Bridge_FW.bin
 - This is the latest image built from [NuLink2_ISP_Bridge](../../../NuLink2_ISP_Bridge)
 - ISP bridge firmware is also integrated into NuLink2FW.bin, so ISP tool can connect with NuLink2FW.bin, too.
 
-### NuLink2_ISPLink2.bin
+#### NuLink2_ISPLink2.bin
 - This is the latest image built from [NuLink2_ISPLink2](../../../NuLink2_ISPLink2)
 
-### NuLink2_ICP_Library.bin
+#### NuLink2_ICP_Library.bin
 - This is the latest image built from [ICP library](../../../NuLink2_ICP_Library)
 - ICPLib (two-wire ICP interface for NuMicro cortexM & 8051)
 Nu-Link1 (NUC12SRE3DN)
 Nu-Link2 (M48SKIDAE)
 
-### NuLink2_Bus_Monitor.bin
+#### NuLink2_Bus_Monitor.bin
 - This is the latest image built from [NuLink2_Bus_Monitor](../../../NuLink2_Bus_Monitor)
 
 <br>
