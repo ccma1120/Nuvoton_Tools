@@ -61,7 +61,8 @@ Nu-Link2 (M48SKIDAE)
 ### NuLink2_Bus_Monitor.bin
 - This is the latest image built from [NuLink2_Bus_Monitor](../../../NuLink2_Bus_Monitor)
 
-
+<br>
+<br>
 
 ## How to update Nu-Link2 firmware?
 1. Press the button on Nu-Link2 and plug in USB cable.
