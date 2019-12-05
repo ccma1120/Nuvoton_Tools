@@ -5,23 +5,21 @@
 # Nu-Link2 debugging and programming adapter
 When using debugger and programmer tool above, you need an USB apatper. 
 We introduce you a new feature-rich Nu-Link2 adapter here.
-### The role of Nu-Link2 adapter
-![](img\nulink2.JPG)
+## The role of Nu-Link2 adapter
+![](img/nulink2.JPG)
 
 Many firmware image .bin can be found [here](./Latest_NuLink_Firmware)
 
-NuLink2FW.bin
-Proprietary code 
-USB interfaces HID(proprietary commands)/MSC/VCOM 
-(Support NuMicro 8051, NuMicro specific features (config0/config1 dataflash setting, KPROM, etc.), unlimited flash break points, offline programming, user code protection) 
+### NuLink2FW.bin
+- Proprietary code 
+- USB interfaces HID(proprietary commands)/MSC/VCOM 
+- Support NuMicro 8051, NuMicro specific features (config0/config1 dataflash setting, KPROM, etc.), unlimited flash break points, offline programming, user code protection
 
-DAPLink on Nu-Link2 (3rd party IDE, customized ICE, mbed compatible, …)
-FW upgrade: Consider using switch, switch between (DAPLink and NuLink2)
-
-NuLink2_DAPLink.bin
- vs. CMSIS-DAP
+### NuLink2_DAPLink.bin
+- USB interfaces HID(CMSIS-DAP)/MSC/VCOM 
+- 3rd party IDE, customized ICE, mbed compatible
  
-### How to update Nu-Link2 firmware?
+## How to update Nu-Link2 firmware?
 1. Press the button on Nu-Link2 and plug in USB cable.
 2. A "Nu-Link2" disk will show. (If you see disk name is "NuMicro MCU", it will upgrade DUT firmware instead of Nu-Link2 itself) 
 3. Drag and drop above image .bin into the disk.
