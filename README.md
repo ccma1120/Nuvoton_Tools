@@ -37,13 +37,22 @@ DATAFLASH=0
 END
 
 ### NuLink2_Bus_Monitor.bin
-I2C (PIN 3, 4)，SPI (PIN 5~8 – SS, CLK, MOSI, MISO)，RS485 (PIN 9, 10)，CAN (PIN 11, 12)，GND (PIN 18, 20)
+#### pins
+- I2C (PIN 3, 4)
+- SPI (PIN 5~8 – SS, CLK, MOSI, MISO)
+- RS485 (PIN 9, 10)
+- CAN (PIN 11, 12)
+- GND (PIN 18, 20)
+![](img/bus_monitor_pins.png)
 
 configuration
-目前沒有開任何選項，都是固定寫死。
 SPI Bus 的傳輸只能是 Mode 0，Bit Length 8
 RS485 Bus 的 Baud Rate 是 115200
 CAN Bus 的 Baud Rate 是 500K
+![](img/bus_monitor_wsg.png)
+
+![](img/i2c_monitor.png)
+
 
 
 Data Only HEX (00-FF)
