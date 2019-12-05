@@ -4,19 +4,19 @@ Debugger
 - [KEIL Nu-Link debugger driver installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520101208200142)
 - [IAR Nu-Link debugger driver installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520101208200227)
 - [NuEclipse installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020180913190214)
-- [pyOCD (debug adapter with CMSIS-DAP commands)](../../../pyOCD)
-- [openOCD (debug adapter with Nu-Link proprietary commands)](../../../Nuvoton-OpenOCD)
-- [PinView](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020160317155513)  
+- [PinView installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020160317155513)  
+- [pyOCD source code (debug adapter with CMSIS-DAP commands)](https://github.com/OpenNuvoton/pyOCD)
+- [openOCD source code (debug adapter with Nu-Link proprietary commands)](https://github.com/OpenNuvoton/OpenOCD-Nuvoton)
 
 NuTool: Coding assistant  
-- [PinConfig](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020150724174251)
-- [ClockConfig](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020161014155032)
+- [PinConfig installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020150724174251)
+- [ClockConfig installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020161014155032)
 - CodeGen (coming soon)
 
 ## Programmer Tool
 - [ICPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520101208200310)  
 - [ISPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0320101221101703)  
-- [ISPTool source code](../../../ISPTool/)    
+- [ISPTool source code](https://github.com/OpenNuvoton/ISPTool/)    
 - [NuLink command tool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520160317094731)  
   
 # Nu-Link2 debugging and programming adapter
@@ -47,15 +47,6 @@ All Nu-Link2 firmware image (.bin files) can be found [here](./Latest_NuLink_Fir
 
 ### NuLink2_ISPLink2.bin
 - This is the latest image built from [NuLink2_ISPLink2](https://github.com/OpenNuvoton/NuLink2_ISPLink2)
-- Program ISPLink2 FW to Nu-Link2 -> pop up a USB DISK -> format it
-Put DEFINE.TXT, TEST1.BIN into DISK
-DEFINE.TXT
-START
-APROM=1
-0:\\test1.bin
-DATAFLASH=0
-0:\\test2.bin
-END
 
 ### NuLink2_ICP_Library.bin
 - This is the latest image built from [ICP library](https://github.com/OpenNuvoton/NuLink2_ICP_Library)
