@@ -6,7 +6,7 @@
 When using debugger and programmer tool above, you need an USB apatper. 
 We introduce you a new feature-rich Nu-Link2 adapter here.
 ## The role of Nu-Link2 adapter
-![](img/nulink2.JPG)
+![](img/nulink2.PNG)
 
 Many firmware image .bin can be found [here](./Latest_NuLink_Firmware)
 
