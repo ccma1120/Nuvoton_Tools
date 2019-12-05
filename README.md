@@ -5,10 +5,10 @@
 - [IAR Nu-Link debugger driver installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520101208200227)
 
 # Programmer Tool
-[ICPTool and ISPTool](https://www.nuvoton.com/hq/support/tool-and-software/software/programmer/)  
+[Official webpage](https://www.nuvoton.com/hq/support/tool-and-software/software/programmer/)  
 [ICPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520101208200310)  
 [ISPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0320101221101703)  
-[ISPTool source code](../../../Nuvoton_Tools/)    
+[ISPTool source code](../../../ISPTool/)    
 [NuLink command tool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520160317094731)  
   
 # Nu-Link2 debugging and programming adapter
