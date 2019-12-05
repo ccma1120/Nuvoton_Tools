@@ -2,13 +2,16 @@
 [Nu-Link driver and NuTool](https://www.nuvoton.com/hq/support/tool-and-software/software/development-tool/)
 # Programmer Tool
 [ICPTool and ISPTool](https://www.nuvoton.com/hq/support/tool-and-software/software/programmer/)
+  
+  
+  
 # Nu-Link2 debugging and programming adapter
 When using debugger and programmer tool above, you need an USB apatper. 
 We introduce you a new feature-rich Nu-Link2 adapter here.
 ## The role of Nu-Link2 adapter
 ![](img/nulink2.PNG)
 
-All Nu-Link2 firmware image .bin can be found [here](./Latest_NuLink_Firmware)
+All Nu-Link2 firmware image (.bin files) can be found [here](./Latest_NuLink_Firmware)
 
 ### NuLink2FW.bin
 - Proprietary code (most of Nu-Link2 firmware are open source except NuLink2FW.bin)
@@ -18,7 +21,7 @@ All Nu-Link2 firmware image .bin can be found [here](./Latest_NuLink_Firmware)
 ### NuLink2_DAPLink.bin
 - This is the latest image built from [DAPLink on Nu-Link2](https://github.com/OpenNuvoton/DapLink)
 - USB interfaces HID(CMSIS-DAP)/MSC/VCOM 
-- 3rd party IDE, customized ICE, mbed compatible
+- Support many 3rd party IDE
 
 ### NuLink2_ISP_Bridge_FW.bin
 - This is the latest image built from [NuLink2_ISP_Bridge](https://github.com/OpenNuvoton/NuLink2_ISP_Bridge)
@@ -36,8 +39,16 @@ DATAFLASH=0
 0:\\test2.bin
 END
 
+### NuLink2_ICP_Library.bin
+- This is the latest image built from [ICP library](https://github.com/OpenNuvoton/NuLink2_ICP_Library)
+- ICPLib (two-wire ICP interface for NuMicro cortexM & 8051)
+Nu-Link1 (NUC12SRE3DN)
+Nu-Link2 (M48SKIDAE)
+
 ### NuLink2_Bus_Monitor.bin
-#### pins
+![](img/bus_monitor_wsg.png)
+
+#### input pins
 - I2C (PIN 3, 4)
 - SPI (PIN 5~8 – SS, CLK, MOSI, MISO)
 - RS485 (PIN 9, 10)
@@ -45,20 +56,23 @@ END
 - GND (PIN 18, 20)
 ![](img/bus_monitor_pins.png)
 
-configuration
-SPI Bus 的傳輸只能是 Mode 0，Bit Length 8
-RS485 Bus 的 Baud Rate 是 115200
-CAN Bus 的 Baud Rate 是 500K
-![](img/bus_monitor_wsg.png)
+#### configuration
+- SPI Bus Mode 0，Bit Length 8
+- RS485 Bus Baud Rate 115200
+- CAN Bus Baud Rate 500K
 
-![](img/i2c_monitor.png)
+#### output
 
-
-
+![](img/i2c_monitor.png)  
+![](img/spi_monitor.png)  
+![](img/rs485_monitor.png)  
 Data Only HEX (00-FF)
 註：底層仍是 RS232
 
-CAN 支援兩種格式的 ID
+![](img/can_monitor.png)  
+
+
+Support CAN ID
 STD (11 bit ID HEX, 0~7FF)
 EXT (29 bit ID HEX)
 DLC 是 Data 長度
@@ -68,11 +82,6 @@ DATA, HEX (0000 - FFFF)
 CAN/485/I2C/SPI Monitor tool FW (NuLink2 only)
 Standalone: Bandwidth requirement
 
-### NuLink2_ICP_Library.bin
-- This is the latest image built from [ICP library](https://github.com/OpenNuvoton/NuLink2_ICP_Library)
-- ICPLib (two-wire ICP interface for NuMicro cortexM & 8051)
-Nu-Link1 (NUC12SRE3DN)
-Nu-Link2 (M48SKIDAE)
 
 
 ## How to update Nu-Link2 firmware?
