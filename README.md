@@ -48,40 +48,6 @@ Nu-Link2 (M48SKIDAE)
 ### NuLink2_Bus_Monitor.bin
 ![](img/bus_monitor_wsg.png)
 
-#### input pins
-- I2C (PIN 3, 4)
-- SPI (PIN 5~8 – SS, CLK, MOSI, MISO)
-- RS485 (PIN 9, 10)
-- CAN (PIN 11, 12)
-- GND (PIN 18, 20)
-![](img/bus_monitor_pins.png)
-
-#### configuration
-- SPI Bus Mode 0，Bit Length 8
-- RS485 Bus Baud Rate 115200
-- CAN Bus Baud Rate 500K
-
-#### output
-
-![](img/i2c_monitor.png)  
-![](img/spi_monitor.png)  
-![](img/rs485_monitor.png)  
-Data Only HEX (00-FF)
-註：底層仍是 RS232
-
-![](img/can_monitor.png)  
-
-
-Support CAN ID
-STD (11 bit ID HEX, 0~7FF)
-EXT (29 bit ID HEX)
-DLC 是 Data 長度
-DATA, HEX (0000 - FFFF)
-
-
-CAN/485/I2C/SPI Monitor tool FW (NuLink2 only)
-Standalone: Bandwidth requirement
-
 
 
 ## How to update Nu-Link2 firmware?
