@@ -1,14 +1,19 @@
-# PC Tool 
+# PC Tool [Official webpage](https://www.nuvoton.com/hq/support/tool-and-software/development-tool-hardware/)
 ## Development Tool
-[Official webpage: Nu-Link driver and NuTool](https://www.nuvoton.com/hq/support/tool-and-software/software/development-tool/)
+Debugger
 - [KEIL Nu-Link debugger driver installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520101208200142)
 - [IAR Nu-Link debugger driver installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520101208200227)
 - [NuEclipse installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020180913190214)
 - [pyOCD (debug adapter with CMSIS-DAP commands)](../../../pyOCD)
 - [openOCD (debug adapter with Nu-Link proprietary commands)](../../../Nuvoton-OpenOCD)
+- [PinView](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020160317155513)  
+
+NuTool: Coding assistant  
+- [PinConfig](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020150724174251)
+- [ClockConfig](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020161014155032)
+- CodeGen (coming soon)
 
 ## Programmer Tool
-[Official webpage](https://www.nuvoton.com/hq/support/tool-and-software/software/programmer/)  
 - [ICPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520101208200310)  
 - [ISPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0320101221101703)  
 - [ISPTool source code](../../../ISPTool/)    
