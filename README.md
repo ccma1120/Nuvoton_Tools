@@ -18,7 +18,23 @@ Many firmware image .bin can be found [here](./Latest_NuLink_Firmware)
 ### NuLink2_DAPLink.bin
 - USB interfaces HID(CMSIS-DAP)/MSC/VCOM 
 - 3rd party IDE, customized ICE, mbed compatible
- 
+
+### NuLink2_ISP_bridge_FW.bin
+- This is the latest image built from [ISP bridge](https://github.com/OpenNuvoton/NuLink2_ISP_Bridge)
+- ISP bridge firmware is also integrated into NuLink2FW.bin, so ISP tool can connect with NuLink2FW.bin, too.
+
+### NuLink2_ISPLink2.bin
+- This is the latest image built from [ISPLink2](https://github.com/OpenNuvoton/NuLink2_ISPLink2)
+Program ISPLink2 FW to Nu-Link2 -> pop up a USB DISK -> format it
+Put DEFINE.TXT, TEST1.BIN into DISK
+DEFINE.TXT
+START
+APROM=1
+0:\\test1.bin
+DATAFLASH=0
+0:\\test2.bin
+END
+
 ## How to update Nu-Link2 firmware?
 1. Press the button on Nu-Link2 and plug in USB cable.
 2. A "Nu-Link2" disk will show. (If you see disk name is "NuMicro MCU", it will upgrade DUT firmware instead of Nu-Link2 itself) 
@@ -35,22 +51,9 @@ Besides NuLink2FW.bin, most of Nu-Link2 firmware are open source. And can be fou
 [pyOCD for Nu-Link2 (using CMSIS-DAP)](https://github.com/OpenNuvoton/pyOCD)
 
 
-I2P bridge FW on Nu-Link2 only
-Standalone <open-source> 
-Integrate with ICE
 
 
-ISP-Link2 FW on Nu-Link2
-Standalone <open-source> 
-Program ISPLink2 FW to Nu-Link2 -> pop up a USB DISK -> format it
-Put DEFINE.TXT, TEST1.BIN into DISK
-DEFINE.TXT
-START
-APROM=1
-0:\\test1.bin
-DATAFLASH=0
-0:\\test2.bin
-END
+
 
 Bus Monitor tool
 
