@@ -1,24 +1,34 @@
 # Development Tool
 [Nu-Link driver and NuTool](https://www.nuvoton.com/hq/support/tool-and-software/software/development-tool/)
-# Programmer
+# Programmer Tool
 [ICPTool and ISPTool](https://www.nuvoton.com/hq/support/tool-and-software/software/programmer/)
 # Nu-Link2 debugging and programming adapter
-![The role of Nu-Link2 adapter](img/nulink2.PNG)
+When using debugger and programmer tool above, you need an USB apatper. 
+We introduce you a new feature-rich Nu-Link2 adapter here.
+### The role of Nu-Link2 adapter
+![](img\nulink2.JPG)
 
-
+Many firmware image .bin can be found [here](./Latest_NuLink_Firmware)
 
 NuLink2FW.bin
-Proprietary code vs. open source
-Both have HID/MSC/VCOM (Nu-Link1 need jumper)
-HID (proprietary command vs. CMSIS-DAP)
-Nu-Link2 proprietary FW 
+Proprietary code 
+USB interfaces HID(proprietary commands)/MSC/VCOM 
 (Support NuMicro 8051, NuMicro specific features (config0/config1 dataflash setting, KPROM, etc.), unlimited flash break points, offline programming, user code protection) 
+
 DAPLink on Nu-Link2 (3rd party IDE, customized ICE, mbed compatible, …)
 FW upgrade: Consider using switch, switch between (DAPLink and NuLink2)
 
 NuLink2_DAPLink.bin
+ vs. CMSIS-DAP
+ 
+### How to update Nu-Link2 firmware?
+1. Press the button on Nu-Link2 and plug in USB cable.
+2. A "Nu-Link2" disk will show. (If you see disk name is "NuMicro MCU", it will upgrade DUT firmware instead of Nu-Link2 itself) 
+3. Drag and drop above image .bin into the disk.
+4. Re-plug in the USB cable and done.
 
 # Nu-Link2 open platform
+Besides NuLink2FW.bin, most of Nu-Link2 firmware are open source. And can be found below.
 ## Open source firmware
 [DAPLink on Nu-Link2](https://github.com/OpenNuvoton/DapLink)   
 [ISP bridge](https://github.com/OpenNuvoton/NuLink2_ISP_Bridge)    
