@@ -61,9 +61,7 @@ All Nu-Link2 firmware image (.bin files) can be found [here](./Latest_NuLink_Fir
 
 #### NuLink2_ICP_Library.bin
 - This is the latest image built from [ICP library](../../../NuLink2_ICP_Library)
-- ICPLib (two-wire ICP interface for NuMicro cortexM & 8051)
-Nu-Link1 (NUC12SRE3DN)
-Nu-Link2 (M48SKIDAE)
+- ICPLib (two-wire ICP interface for NuMicro cortexM & 8051) on Nu-Link2 (M48SKIDAE)
 
 #### NuLink2_Bus_Monitor.bin
 - This is the latest image built from [NuLink2_Bus_Monitor](../../../NuLink2_Bus_Monitor)
