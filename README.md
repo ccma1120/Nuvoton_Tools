@@ -24,10 +24,10 @@ NuTool: Coding assistant
 <br>
 
 # Nu-Link2 debugging and programming adapter
-When using debugger and programmer tool above, you need an USB apatper. 
+When using debugging and programming tool above, you need an USB apatper. 
 We introduce you a new feature-rich Nu-Link2 adapter here.
 ### The role of Nu-Link2 adapter
-User can switch roles that Nu-Link2 play by re-programming Nu-Link2 to another .bin file  
+User can switch between roles that Nu-Link2 play by re-programming Nu-Link2 to another .bin file  
 All Nu-Link2 firmware image (.bin files) can be found [here](./Latest_NuLink_Firmware)  
 #### How to update Nu-Link2 firmware?
 1. Press the button on Nu-Link2 and plug in USB cable.
@@ -37,14 +37,15 @@ All Nu-Link2 firmware image (.bin files) can be found [here](./Latest_NuLink_Fir
 
 ![](img/nulink2.PNG)
 
+### Brief description of each adapter bin file  
 #### NuLink2FW.bin
-- Proprietary code (most of Nu-Link2 firmware are open source except NuLink2FW.bin)
+- Proprietary code (except NuLink2FW.bin, most of Nu-Link2 firmware are open source)
 - USB interfaces HID(proprietary commands)/MSC/VCOM 
-- Support NuMicro 8051, NuMicro specific features (config0/config1 dataflash setting, KPROM, etc.), unlimited flash break points, offline programming, user code protection
+- Support NuMicro 8051, offline programming, user code read-out protection, unlimited flash break points, NuMicro chips specific features (config0/config1 dataflash setting, KPROM, etc.)
 
 #### NuLink2_DAPLink.bin
 - This is the latest image built from [DAPLink on Nu-Link2](../../../DapLink)
-- USB interfaces HID(CMSIS-DAP)/MSC/VCOM 
+- USB interfaces HID(CMSIS-DAP commands)/MSC/VCOM 
 - Support many 3rd party IDE
 
 #### NuLink2_CMSIS_DAP.bin
