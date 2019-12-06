@@ -27,9 +27,15 @@ NuTool: Coding assistant
 When using debugger and programmer tool above, you need an USB apatper. 
 We introduce you a new feature-rich Nu-Link2 adapter here.
 ### The role of Nu-Link2 adapter
-![](img/nulink2.PNG)
+User can switch roles that Nu-Link2 play by re-programming Nu-Link2 to another .bin file  
+All Nu-Link2 firmware image (.bin files) can be found [here](./Latest_NuLink_Firmware)  
+#### How to update Nu-Link2 firmware?
+1. Press the button on Nu-Link2 and plug in USB cable.
+2. A "Nu-Link2" disk will show. (If you see disk name is "NuMicro MCU", it will upgrade DUT firmware instead of Nu-Link2 itself) 
+3. Drag and drop Nu-Link2 image .bin into the disk.
+4. Re-plug the USB cable and it's done.
 
-All Nu-Link2 firmware image (.bin files) can be found [here](./Latest_NuLink_Firmware)
+![](img/nulink2.PNG)
 
 #### NuLink2FW.bin
 - Proprietary code (most of Nu-Link2 firmware are open source except NuLink2FW.bin)
@@ -64,9 +70,4 @@ Nu-Link2 (M48SKIDAE)
 <br>
 <br>
 
-## How to update Nu-Link2 firmware?
-1. Press the button on Nu-Link2 and plug in USB cable.
-2. A "Nu-Link2" disk will show. (If you see disk name is "NuMicro MCU", it will upgrade DUT firmware instead of Nu-Link2 itself) 
-3. Drag and drop Nu-Link2 image .bin into the disk.
-4. Re-plug the USB cable and it's done.
 
