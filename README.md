@@ -1,72 +1,90 @@
-# PC Tool  
-[Nuvoton tools official website](https://www.nuvoton.com/hq/support/tool-and-software/development-tool-hardware/)
-## Development Tool
-Debugger
-- [KEIL Nu-Link debugger driver installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520101208200142)
-- [IAR Nu-Link debugger driver installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520101208200227)
-- [NuEclipse installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020180913190214)
-- [PinView installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020160317155513)  
-- [pyOCD source code (debug adapter with CMSIS-DAP commands)](../../../pyOCD)
-- [openOCD source code (debug adapter with Nu-Link proprietary commands)](../../../OpenOCD-Nuvoton)
 
-NuTool: Coding assistant  
-- [PinConfig installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020150724174251)
-- [ClockConfig installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW1020161014155032)
-- CodeGen (coming soon)
+```mermaid
+gantt
+dateFormat  YYYY-MM
+title MS60 plan
 
-## Programmer Tool
-- [ICPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520101208200310)  
-- [ISPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0320101221101703)  
-- [ISPTool source code](../../../ISPTool/)    
-- [NuLink command tool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0520160317094731)  
+section ms00
+ms70 man power for nucodegen      : 2020-06,2020-09
 
-<br>
-<br>
+section ycc
+m030g/m0a21 offline             :   done, a1, 2020-04,1d
+m471 (one more dataflash, xom, bank swap, otp) modify tool              :  done, a2, after a1, 30d
+m2354 MP, tc8250 get board dpm nulink2            :  a3, after a1, 30d
+ml56/ m0a21 nulink2 after get board:   
+m031 + m030g/m0a21  modify tool : a4, after a3, 20d
+multi debugger for NUA3500, ICPLib M030G               :         a5, after a4, 45d
 
-# Nu-Link2 debugging and programming adapter
-When using debugging and programming tool above, you need an USB apatper. 
-We introduce you a new feature-rich Nu-Link2 adapter here.
-### The role of Nu-Link2 adapter
-User can switch between roles that Nu-Link2 play by re-programming Nu-Link2 to another .bin file  
-All Nu-Link2 firmware image (.bin files) can be found [here](./Latest_NuLink_Firmware)  
-#### How to update Nu-Link2 firmware?
-1. Press the button on Nu-Link2 and plug in USB cable.
-2. A "Nu-Link2" disk will show. (If you see disk name is "NuMicro MCU", it will upgrade DUT firmware instead of Nu-Link2 itself) 
-3. Drag and drop Nu-Link2 image .bin into the disk.
-4. Re-plug the USB cable and it's done.
+section cctu
+NuSenadj       : b1, 2020-04, 15d
+NuBridge2 basic+script             :done, b2, after b1,15d
+NuBridge2 log, UM: b3, after b2  , 15d
+isp bridge ap note  :b4, after b3 , 16d 
+ISP cross platform, command line: b5, after b4 , 50d 
+(stm32cube monitor) ADC/PWM/SWD chart  :  
 
-![](img/nulink2.PNG)
+section cyyu
+rtt pin            : done, c1, 2020-04,1d
+rtt clock: done, c2, after c1, 15d
+PinConfig M2354/m471/m258/m030g/m0A21: c3, after c2, 15d
+NuCodeGen performance: c4, after c3, 15d
+PinConfig NUA3500:  
+NuCodeGen feedback, M031 series: c5, after c4, 70d 
 
-### Brief description of each adapter bin file  
-#### NuLink2FW.bin
-- Proprietary code (except NuLink2FW.bin, most of Nu-Link2 firmware are open source)
-- USB interfaces HID(proprietary commands)/MSC/VCOM 
-- Support NuMicro 8051, offline programming, user code read-out protection, unlimited flash break points, NuMicro chips specific features (config0/config1 dataflash setting, KPROM, etc.)
+section ccli
+NDA102SD2 (keil/icp auto chip type)           :done, d1, 2020-04, 20d
+CP datalog:  done,2020-04, 20d
+VBATool UM/RH format: 2020-04, 20d 
+nucmd tool m030g/m0a21:done,d2, after d1  ,7d  
+nucodegen feedback/UX enhance :d3, after d2  , 50d
+m480 spi flash bp jump/remap:  
+performance e.g. m031 PLL/ m480ld:  
+Help ClockConfifg/Pinconfig related:  
 
-#### NuLink2_DAPLink.bin
-- This is the latest image built from [DAPLink on Nu-Link2](../../../DapLink)
-- USB interfaces HID(CMSIS-DAP commands)/MSC/VCOM 
-- Support many 3rd party IDE
+section ychsu
+script GPIO/dualcore       : done, e1, 2020-04,13d
+m2354 mbed download: done,10d
+m030g/m0a21/m471/m479/ml56 pinview: 7d  
+m030g :10d         
+SD card no M2351/NUC505/M261/M480SPI:14d  
+NuBridge2 merge    :25d  
+script calls ICE API to control nulink2 GPIO/PWM/ADC:35d  
 
-#### NuLink2_CMSIS_DAP.bin
-- This is the latest image built from [CMSIS-DAP on Nu-Link2](../../../NuLink2_CMSIS_DAP)
-- If you don't need rich features of DAPLink, this is the light weight choice of CMSIS-DAP firmware.
 
-#### NuLink2_ISP_Bridge_FW.bin
-- This is the latest image built from [NuLink2_ISP_Bridge](../../../NuLink2_ISP_Bridge)
-- ISP bridge firmware is also integrated into NuLink2FW.bin, so ISP tool can connect with NuLink2FW.bin, too.
+```
 
-#### NuLink2_ISPLink2.bin
-- This is the latest image built from [NuLink2_ISPLink2](../../../NuLink2_ISPLink2)
 
-#### NuLink2_ICP_Library.bin
-- This is the latest image built from [ICP library](../../../NuLink2_ICP_Library)
-- ICPLib (two-wire ICP interface for NuMicro cortexM & 8051) on Nu-Link2 (M48SKIDAE)
 
-#### NuLink2_Bus_Monitor.bin
-- This is the latest image built from [NuLink2_Bus_Monitor](../../../NuLink2_Bus_Monitor)
 
-<br>
-<br>
+=====
+
+    github opensource auto build and update
+    version control git check trm            
+    nucodegen auto test system, performance, coverage, add series            
+    get customer mail/contact information
+
+    8051 freeIDE
+    offline cert export     
+    swdlib: power control, general M0 support        
+    cross platform ICP
+
+    M487 TRNG for DH key
+    cmsisDAPv2 + wcid  
+    Estimate test USBH testing time for百佳泰 (if need)
+    ETM some function name can't display on nutrace window
+    ETM display line of the source code 
+    ETM save log to a file
+    ETM easy DWT config
+    SWO, JTAG
+
+    nucodegen todos
+    NuEclipse dual bank/dpm/plm/xom   
+    Nueclipse release nulink2 voltage better to be adjusted 
+    clockConfig HXT 不能輸入小數 e.g. 22.1184MHz
+
+    new isp protocol, IAP
+    isp export/import
+
+
 
 
