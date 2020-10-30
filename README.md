@@ -13,6 +13,9 @@ NuTool: Coding assistant
 - [PinConfig installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200319135912)
 - [ClockConfig installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200930114649)
 
+Signal analyzer/pass-through bridge: 
+- [NuBridge2_Terminal](https://www.nuvoton.com/) (for I2C/SPI/CAN)
+
 ## Programmer Tool
 - [ICPTool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181328)  
 - [ISPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0320101221101703)  
@@ -37,8 +40,9 @@ All Nu-Link2-Pro firmware image (.bin files) can be found [here](./Latest_NuLink
 3. Drag and drop Nu-Link2-Pro image .bin into the disk.
 4. Re-plug the USB cable and it's done.
 #### More options for NuLink2FW
-When you upgrade the NuLink2FW.bin version larger than v6131, and open NU.TXT in pop-up "NuMicro MCU" disk, you will see some options in NU.TXT .
-For example, you can see Nu-Bridge and CMSIS-DAP option. 
+>When you upgrade the NuLink2FW.bin version larger than v6131, and open NU.TXT in pop-up "NuMicro MCU" disk, you will see some options in NU.TXT .
+For example, you can see Nu-Bridge and CMSIS-DAP option.
+
 Set Nu-Bridge=1 then re-plug in USB cable, Nu-Bridge function will be enabled. Nu-Bridge offers pass-through function for I2C/SPI/RS485/CAN interfaces. 
 (You will see an additional "Nu-Bridge2 Virtual Com Port" in device manager.)
 picture of NB2 (information about NB2)
