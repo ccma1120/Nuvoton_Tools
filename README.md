@@ -67,6 +67,10 @@ User can re-program Nu-Link2-Pro to another .bin file by the following instructi
 - Support many 3rd party IDE
 - USB interfaces: HID(CMSIS-DAP commands)/MSC/VCOM 
 
+#### Some other NuLink2 Example code
+- [NuLink2_Offline_ISP](https://github.com/OpenNuvoton/NuLink2_ISPLink2)
+- [NuLink2_ICP_Library](https://github.com/OpenNuvoton/NuLink2_ICP_Library)
+            
 <br>
 <br>
 
