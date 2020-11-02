@@ -36,14 +36,16 @@ All Nu-Link2-Pro firmware binary files can be found [here](./Latest_NuLink_Firmw
 User can re-program Nu-Link2-Pro to another .bin file by the following instructions.
 #### How to update Nu-Link2-Pro firmware?
 1. Press the button on Nu-Link2-Pro and plug in USB cable.
-2. A "Nu-Link2-Pro" disk will show. (If you see disk name is "NuMicro MCU", it will upgrade DUT firmware instead of Nu-Link2-Pro itself) 
+2. A "Nu-Link2-Pro" disk will show.  (If you see disk name is "NuMicro MCU", it will upgrade DUT firmware instead of Nu-Link2-Pro itself) 
 3. Drag and drop Nu-Link2-Pro image .bin into the disk.
 4. Re-plug the USB cable and it's done.
 #### More options for NuLink2FW (configuration file NU.TXT)
 1. When you upgrade the NuLink2FW.bin version larger than v6131, and open NU.TXT file in pop-up "NuMicro MCU" disk, you will see some options in NU.TXT.
+![](img/NUTXT.png)
 2. For example, you can see Nu-Bridge and CMSIS-DAP option.
 * Set Nu-Bridge=1 then re-plug in USB cable, Nu-Bridge function will be enabled. Nu-Bridge offers pass-through function for I2C/SPI/RS485/CAN interfaces.  
 (You will see an "Nu-Bridge2 Virtual Com Port" in device manager.)  
+![](img/device_manager.png)
 * Set Nu-Bridge=0 then re-plug in USB cable, ISP-Bridge function will be enabled. ISP-Bridge offers I2C/SPI/RS485/CAN interfaces those communicate with ISPTool.  
 (You will see an USB HID interface [VID:0x0416, PID:0x5203, interface:05] in device manager.)  
 (Note that Nu-Bridge and ISP-Bridge will not present at the same time.)  
@@ -54,9 +56,9 @@ User can re-program Nu-Link2-Pro to another .bin file by the following instructi
 ![](img/nulink2-2.PNG)
 ![](img/nulink2-3.PNG)
 
-### Brief description of each adapter bin file  
+### Brief description of firmware binary file  
 #### [NuLink2FW.bin](./Latest_NuLink_Firmware)
-- Proprietary code (except NuLink2FW.bin, most of Nu-Link2-Pro firmware are open source)
+- Proprietary code 
 - Support NuMicro 8051, offline programming, user code read-out protection, unlimited flash break points, NuMicro chips specific features (config0/config1 dataflash setting, KPROM, etc.)
 - USB interfaces: HID_ICE(proprietary commands)/MSC/VCOM/HID_CMSIS-DAP/HID_ISP or VCOM_NuBridge (set in NU.TXT)
 
