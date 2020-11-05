@@ -69,7 +69,7 @@ More options for NuLink2FW (configuration file NU.TXT)
 - USB interfaces: HID(CMSIS-DAP commands)/MSC/VCOM 
 
 ### Some other example projects for NuLink2  
-- [NuLink2_Offline_ISP](https://github.com/OpenNuvoton/Nu-Link2-Pro_Offline_ISP)
+- [Nu-Link2-Pro_Offline_ISP](https://github.com/OpenNuvoton/Nu-Link2-Pro_Offline_ISP)
 - [NuLink2_ICP_Library](https://github.com/OpenNuvoton/NuLink2_ICP_Library)
             
 <br>
