@@ -31,6 +31,12 @@ When using software development tools above, you may need an USB adapter.
 We introduce you a new feature-rich Nu-Link2-Pro adapter here.   
 - [Where to buy](https://direct.nuvoton.com/tw/Nu-Link2-pro)   
 - [User manual](https://www.nuvoton.com/resource-download.jsp?tp_GUID=UG1320200319174043)  
+
+### An overview picture of all NuMicro software development tools  
+![](img/nulink2-1.PNG)
+![](img/nulink2-2.PNG)
+![](img/nulink2-3.PNG)
+
 ### The firmware of Nu-Link2-Pro adapter
 All Nu-Link2-Pro firmware binary files can be found [here](./Latest_NuLink_Firmware)  
 User can re-program Nu-Link2-Pro to another .bin file by the following instructions (Windows OS)  
@@ -50,11 +56,6 @@ More options for NuLink2FW (configuration file NU.TXT)
 (Note that Nu-Bridge and ISP-Bridge will not present at the same time.)  
 * Set CMSIS-DAP=1 then re-plug in USB cable, it presents one more interface HID_CMSIS-DAP, this is handy if you want to use CMSIS-DAP protocol.
 (You will see an USB HID interface [VID:0x0416, PID:0x5203, interface:06] in device manager.)
-
-### An overview picture of all NuMicro software development tools  
-![](img/nulink2-1.PNG)
-![](img/nulink2-2.PNG)
-![](img/nulink2-3.PNG)
 
 ### Comparison of NuLink2FW and NuLink2_DAPLink  
 #### [NuLink2FW.bin](./Latest_NuLink_Firmware)
