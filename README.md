@@ -46,9 +46,9 @@ User can re-program Nu-Link2-Pro to another .bin file by the following instructi
 4. Re-plug the USB cable and it's done.  
 
 More options for NuLink2FW (configuration file NU.TXT)
-1. When you upgrade the NuLink2FW.bin version larger than v7143, open NU.TXT file in pop-up "NuMicro MCU" disk, you will see some options in NU.TXT.  
+1. When you upgrade the NuLink2FW.bin larger than version v7143, open NU.TXT file in pop-up "NuMicro MCU" disk, you will see some options in NU.TXT.  
 ![](img/NUTXT.png)
-2. For example, you can see Nu-Bridge and CMSIS-DAP option.
+2. For example, you can see Nu-Bridge and CMSIS-DAP options.
 * Set Nu-Bridge=1 then re-plug in USB cable, Nu-Bridge function will be enabled. Nu-Bridge offers pass-through function for I2C/SPI/RS485/CAN interfaces.  
 (You will see an "Nu-Bridge2 Virtual Com Port" in device manager.)  
 ![](img/device_manager.png)
