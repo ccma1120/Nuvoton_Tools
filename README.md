@@ -33,7 +33,7 @@ We introduce you a new feature-rich Nu-Link2-Pro adapter here.
 - [User manual](https://www.nuvoton.com/resource-download.jsp?tp_GUID=UG1320200319174043)  
 ### The firmware of Nu-Link2-Pro adapter
 All Nu-Link2-Pro firmware binary files can be found [here](./Latest_NuLink_Firmware)  
-#### User can re-program Nu-Link2-Pro to another .bin file by the following instructions (Windows OS)  
+User can re-program Nu-Link2-Pro to another .bin file by the following instructions (Windows OS)  
 1. Press the button on Nu-Link2-Pro and plug in USB cable.
 2. A "Nu-Link2-Pro" disk will show.  (If you see disk name is "NuMicro MCU", it will upgrade DUT firmware instead of Nu-Link2-Pro itself) 
 3. Drag and drop Nu-Link2-Pro firmware .bin file into the disk.
