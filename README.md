@@ -54,7 +54,7 @@ More options for NuLink2FW (configuration file NU.TXT)
 ![](img/device_manager.png)
 * Set Nu-Bridge=0 then re-plug in USB cable, ISP-Bridge function will be enabled. ISP-Bridge offers I2C/SPI/RS485/CAN interfaces those communicate with ISPTool.  
 (You will see an USB HID interface [HID_ISP][VID:0x0416, PID:0x5203, interface:05] in device manager.)  
-(Note that Nu-Bridge and ISP-Bridge will not present at the same time.)  
+(Note that Nu-Bridge and ISP-Bridge will not present at the same time, there is only one CON6 connector on Nu-Link2-Pro)  
 * Set CMSIS-DAP=1 then re-plug in USB cable, it presents one more interface HID_CMSIS-DAP, this is handy if you want to use CMSIS-DAP protocol.
 (You will see an USB HID interface [HID_CMSIS-DAP][VID:0x0416, PID:0x5203, interface:06] in device manager.)
 
