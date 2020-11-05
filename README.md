@@ -1,6 +1,5 @@
 # NuMicro software development tools  
 [Nuvoton tools official website](https://www.nuvoton.com/tool-and-software/software-development-tool/driver/)
-## Development  
 IDE and Debugger
 - [KEIL Nu-Link debugger driver installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1120200221180521)
 - [IAR Nu-Link debugger driver installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1120200221180914)
@@ -8,20 +7,20 @@ IDE and Debugger
 - [PinView installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200221181935)  
 - [Customized pyOCD source code](https://github.com/OpenNuvoton/pyOCD) (using adapter firmware "NuLink2_DAPLink.bin")
 - [Customized openOCD source code](https://github.com/OpenNuvoton/OpenOCD-Nuvoton)  (using adapter firmware "NuLink2FW.bin")
-  
+
+Programmer  
+- [ICPTool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181328)  
+- [ISPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0320101221101703)  
+- [ISPTool source code](https://github.com/OpenNuvoton/ISPTool)    
+- [ISPTool command set](./doc/NuMicro_ISP_Flow_And_Command_Set.pdf)    
+- [NuLink command tool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181644)  
+
 NuTool: Coding assistant  
 - [PinConfig installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200319135912)
 - [ClockConfig installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200930114649)
 
 Signal pass-through/monitor (for I2C/SPI/CAN): 
 - [NuBridge2_Terminal](https://www.nuvoton.com/) 
-
-## Programmer  
-- [ICPTool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181328)  
-- [ISPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0320101221101703)  
-- [ISPTool source code](https://github.com/OpenNuvoton/ISPTool)    
-- [ISPTool command set](./doc/NuMicro_ISP_Flow_And_Command_Set.pdf)    
-- [NuLink command tool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181644)  
 
 <br>
 <br>
