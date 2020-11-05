@@ -43,7 +43,7 @@ User can re-program Nu-Link2-Pro to another .bin file by the following instructi
 1. Press the button on Nu-Link2-Pro and plug in USB cable.
 2. A "Nu-Link2-Pro" disk will show.  (If you see disk name is "NuMicro MCU", it will upgrade DUT firmware instead of Nu-Link2-Pro itself) 
 3. Drag and drop Nu-Link2-Pro firmware .bin file into the disk.
-4. Re-plug the USB cable and it's done.
+4. Re-plug the USB cable and it's done.  
 More options for NuLink2FW (configuration file NU.TXT)
 1. When you upgrade the NuLink2FW.bin version larger than v7143, open NU.TXT file in pop-up "NuMicro MCU" disk, you will see some options in NU.TXT.  
 ![](img/NUTXT.png)
