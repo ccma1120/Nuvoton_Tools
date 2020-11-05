@@ -52,10 +52,10 @@ More options for NuLink2FW (configuration file NU.TXT)
 (You will see an "Nu-Bridge2 Virtual Com Port" in device manager.)  
 ![](img/device_manager.png)
 * Set Nu-Bridge=0 then re-plug in USB cable, ISP-Bridge function will be enabled. ISP-Bridge offers I2C/SPI/RS485/CAN interfaces those communicate with ISPTool.  
-(You will see an USB HID interface [VID:0x0416, PID:0x5203, interface:05] in device manager.)  
+(You will see an USB HID interface [HID_ISP][VID:0x0416, PID:0x5203, interface:05] in device manager.)  
 (Note that Nu-Bridge and ISP-Bridge will not present at the same time.)  
 * Set CMSIS-DAP=1 then re-plug in USB cable, it presents one more interface HID_CMSIS-DAP, this is handy if you want to use CMSIS-DAP protocol.
-(You will see an USB HID interface [VID:0x0416, PID:0x5203, interface:06] in device manager.)
+(You will see an USB HID interface [HID_CMSIS-DAP][VID:0x0416, PID:0x5203, interface:06] in device manager.)
 
 ### Comparison of NuLink2FW.bin and NuLink2_DAPLink.bin  
 #### [NuLink2FW.bin](./Latest_NuLink_Firmware)
@@ -64,8 +64,8 @@ More options for NuLink2FW (configuration file NU.TXT)
 - USB interfaces: HID_ICE(proprietary commands)/MSC/VCOM/HID_CMSIS-DAP/HID_ISP or VCOM_NuBridge (set in NU.TXT)
 
 #### [NuLink2_DAPLink.bin](./Latest_NuLink_Firmware)
-- This is the latest image built from [DAPLink on Nu-Link2-Pro](https://github.com/OpenNuvoton/DapLink)  
-- Support many 3rd party IDE
+- Open source: [DAPLink on Nu-Link2-Pro](https://github.com/OpenNuvoton/DapLink)  
+- Support many third party IDE
 - USB interfaces: HID(CMSIS-DAP commands)/MSC/VCOM 
 
 ### Some other example projects for NuLink2  
