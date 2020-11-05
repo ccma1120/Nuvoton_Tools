@@ -32,7 +32,7 @@ We introduce you a new feature-rich Nu-Link2-Pro adapter here.
 - [Where to buy](https://direct.nuvoton.com/tw/Nu-Link2-pro)   
 - [User manual](https://www.nuvoton.com/resource-download.jsp?tp_GUID=UG1320200319174043)  
 
-### An overview picture of all NuMicro software development tools  
+An overview picture of software tools, adapter and targets  
 ![](img/nulink2-1.PNG)
 ![](img/nulink2-2.PNG)
 ![](img/nulink2-3.PNG)
@@ -68,8 +68,8 @@ More options for NuLink2FW (configuration file NU.TXT)
 - Support many 3rd party IDE
 - USB interfaces: HID(CMSIS-DAP commands)/MSC/VCOM 
 
-### Some other NuLink2 Example code
-- [NuLink2_Offline_ISP](https://github.com/OpenNuvoton/NuLink2_ISPLink2)
+### Some other example projects for NuLink2  
+- [NuLink2_Offline_ISP](https://github.com/OpenNuvoton/Nu-Link2-Pro_Offline_ISP)
 - [NuLink2_ICP_Library](https://github.com/OpenNuvoton/NuLink2_ICP_Library)
             
 <br>
