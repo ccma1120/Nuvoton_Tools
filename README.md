@@ -27,7 +27,7 @@ Signal pass-through/monitor (for I2C/SPI/CAN):
 <br>
 
 # Nu-Link2-Pro debugging and programming adapter
-When using debugging and programming tool above, you need an USB adapter. 
+When using software development tools above, you may need an USB adapter. 
 We introduce you a new feature-rich Nu-Link2-Pro adapter here.   
 - [Where to buy](https://direct.nuvoton.com/tw/Nu-Link2-pro)   
 - [User manual](https://www.nuvoton.com/resource-download.jsp?tp_GUID=UG1320200319174043)  
