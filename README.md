@@ -13,8 +13,8 @@ NuTool: Coding assistant
 - [PinConfig installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200319135912)
 - [ClockConfig installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200930114649)
 
-Signal pass-through/monitor bridge: 
-- [NuBridge2_Terminal](https://www.nuvoton.com/) (for I2C/SPI/CAN)
+Signal pass-through/monitor (for I2C/SPI/CAN): 
+- [NuBridge2_Terminal](https://www.nuvoton.com/) 
 
 ## Programmer  
 - [ICPTool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181328)  
