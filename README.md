@@ -57,7 +57,7 @@ More options for NuLink2FW (configuration file NU.TXT)
 * Set CMSIS-DAP=1 then re-plug in USB cable, it presents one more interface HID_CMSIS-DAP, this is handy if you want to use CMSIS-DAP protocol.
 (You will see an USB HID interface [VID:0x0416, PID:0x5203, interface:06] in device manager.)
 
-### Comparison of NuLink2FW and NuLink2_DAPLink  
+### Comparison of NuLink2FW.bin and NuLink2_DAPLink.bin  
 #### [NuLink2FW.bin](./Latest_NuLink_Firmware)
 - Proprietary code 
 - Support NuMicro 8051, offline programming, user code read-out protection, unlimited flash break points, NuMicro chips specific features (config0/config1 dataflash setting, KPROM, etc.)
