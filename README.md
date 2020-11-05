@@ -1,7 +1,7 @@
-# PC Tool  
+# NuMicro software development tools  
 [Nuvoton tools official website](https://www.nuvoton.com/tool-and-software/software-development-tool/driver/)
-## Development Tool
-Debugger
+## Development  
+IDE and Debugger
 - [KEIL Nu-Link debugger driver installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1120200221180521)
 - [IAR Nu-Link debugger driver installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1120200221180914)
 - [NuEclipse installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1120200401182901)
@@ -16,7 +16,7 @@ NuTool: Coding assistant
 Signal pass-through/monitor bridge: 
 - [NuBridge2_Terminal](https://www.nuvoton.com/) (for I2C/SPI/CAN)
 
-## Programmer Tool
+## Programmer  
 - [ICPTool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181328)  
 - [ISPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0320101221101703)  
 - [ISPTool source code](https://github.com/OpenNuvoton/ISPTool)    
