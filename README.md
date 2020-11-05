@@ -38,7 +38,7 @@ User can re-program Nu-Link2-Pro to another .bin file by the following instructi
 2. A "Nu-Link2-Pro" disk will show.  (If you see disk name is "NuMicro MCU", it will upgrade DUT firmware instead of Nu-Link2-Pro itself) 
 3. Drag and drop Nu-Link2-Pro firmware .bin file into the disk.
 4. Re-plug the USB cable and it's done.
-#### More options for NuLink2FW (configuration file NU.TXT)
+More options for NuLink2FW (configuration file NU.TXT)
 1. When you upgrade the NuLink2FW.bin version larger than v6131, and open NU.TXT file in pop-up "NuMicro MCU" disk, you will see some options in NU.TXT.  
 ![](img/NUTXT.png)
 2. For example, you can see Nu-Bridge and CMSIS-DAP option.
@@ -51,11 +51,12 @@ User can re-program Nu-Link2-Pro to another .bin file by the following instructi
 * Set CMSIS-DAP=1 then re-plug in USB cable, it presents one more interface HID_CMSIS-DAP, this is handy if you want to use CMSIS-DAP protocol.
 (You will see an USB HID interface [VID:0x0416, PID:0x5203, interface:06] in device manager.)
 
+### The picture is an overview of all NuMicro software development tools  
 ![](img/nulink2-1.PNG)
 ![](img/nulink2-2.PNG)
 ![](img/nulink2-3.PNG)
 
-### Brief description of firmware binary file  
+### Comparison of NuLink2FW and NuLink2_DAPLink  
 #### [NuLink2FW.bin](./Latest_NuLink_Firmware)
 - Proprietary code 
 - Support NuMicro 8051, offline programming, user code read-out protection, unlimited flash break points, NuMicro chips specific features (config0/config1 dataflash setting, KPROM, etc.)
@@ -66,7 +67,7 @@ User can re-program Nu-Link2-Pro to another .bin file by the following instructi
 - Support many 3rd party IDE
 - USB interfaces: HID(CMSIS-DAP commands)/MSC/VCOM 
 
-#### Some other NuLink2 Example code
+### Some other NuLink2 Example code
 - [NuLink2_Offline_ISP](https://github.com/OpenNuvoton/NuLink2_ISPLink2)
 - [NuLink2_ICP_Library](https://github.com/OpenNuvoton/NuLink2_ICP_Library)
             
