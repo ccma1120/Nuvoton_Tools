@@ -49,10 +49,10 @@ More options for NuLink2FW (configuration file NU.TXT)
 1. When you upgrade the NuLink2FW.bin larger than version v7143, open NU.TXT file in pop-up "NuMicro MCU" disk, you will see some options in NU.TXT.  
 ![](img/NUTXT.png)
 2. For example, you can see Nu-Bridge and CMSIS-DAP options.
-* Set Nu-Bridge=1 then re-plug in USB cable, the pass-through bridge function of Nu-Link2-Pro will be enabled (We call the pass-through bridge function "Nu-Bridge", becuase it is on Nu-Link-Pro"2", sometimes also call it "NuBridge2"). NuBridge2 offers pass-through function for I2C/SPI/RS485/CAN interfaces.  
+* Set Nu-Bridge=1 then re-plug in USB cable, the pass-through bridge function of Nu-Link2-Pro will be enabled (We call the pass-through bridge function "Nu-Bridge", becuase it is on Nu-Link-Pro"2", sometimes also call it "NuBridge2"). NuBridge2 pass-through the data between VCOM_NuBridge port and I2C/SPI/RS485/CAN interfaces.  
 (You will see an "Nu-Bridge2 Virtual Com Port" in device manager.)  
 ![](img/device_manager.png)
-* Set Nu-Bridge=0 then re-plug in USB cable, ISP-Bridge function will be enabled. ISP-Bridge offers I2C/SPI/RS485/CAN interfaces those communicate with ISPTool.  
+* Set Nu-Bridge=0 then re-plug in USB cable, another bridge function will be enabled, we call it ISP-Bridge. ISP-Bridge doesn't pass through data, it communicates with ISPTool via HID_ISP, and offers I2C/SPI/RS485/CAN interfaces for ISPTool.  
 (You will see an USB HID interface [HID_ISP][VID:0x0416, PID:0x5203, interface:05] in device manager.)  
 (Note that Nu-Bridge and ISP-Bridge will not present at the same time, there is only one CON6 connector on Nu-Link2-Pro)  
 * Set CMSIS-DAP=1 then re-plug in USB cable, it presents one more interface HID_CMSIS-DAP, this is handy if you want to use CMSIS-DAP protocol.
