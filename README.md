@@ -49,7 +49,7 @@ More options for NuLink2FW (configuration file NU.TXT)
 1. When you upgrade the NuLink2FW.bin larger than version v7143, open NU.TXT file in pop-up "NuMicro MCU" disk, you will see some options in NU.TXT.  
 ![](img/NUTXT.png)
 2. For example, you can see Nu-Bridge and CMSIS-DAP options.
-* Set Nu-Bridge=1 then re-plug in USB cable, Nu-Bridge function will be enabled. Nu-Bridge offers pass-through function for I2C/SPI/RS485/CAN interfaces.  
+* Set Nu-Bridge=1 then re-plug in USB cable, the bridge function of Nu-Link2-Pro will be enabled (Sometimes we also call this function "NuBridge2", to emphasize the difference with the other device "NuBridge1"). NuBridge2 offers pass-through function for I2C/SPI/RS485/CAN interfaces.  
 (You will see an "Nu-Bridge2 Virtual Com Port" in device manager.)  
 ![](img/device_manager.png)
 * Set Nu-Bridge=0 then re-plug in USB cable, ISP-Bridge function will be enabled. ISP-Bridge offers I2C/SPI/RS485/CAN interfaces those communicate with ISPTool.  
