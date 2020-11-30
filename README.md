@@ -17,8 +17,8 @@ Programmer
 - [NuLink command tool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181644)  
 
 NuTool: Coding assistant  
-- [PinConfig installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200319135912)
-- [ClockConfig installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200930114649)
+- [PinConfigure installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200319135912)
+- [ClockConfigure installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200930114649)
 
 Signal pass-through/monitor (for I2C/SPI/CAN): 
 - [NuBridge2_Terminal](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320201109152640) 
