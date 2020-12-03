@@ -45,16 +45,15 @@ User can re-program Nu-Link2-Pro to another .bin file by the following instructi
 3. Drag and drop Nu-Link2-Pro firmware .bin file into the disk.
 4. Re-plug the USB cable and it's done.  
 
-More options for NuLink2FW (configuration file NU.TXT)
-1. When you upgrade the NuLink2FW.bin larger than version v7143, open NU.TXT file in pop-up "NuMicro MCU" disk, you will see some options in NU.TXT.  
+More options for NuLink2FW (configuration file NU_CFG.TXT)
+1. When you upgrade the NuLink2FW.bin larger than version v7143, open NU_CFG.TXT file in pop-up "NuMicro MCU" disk, you will see some options in NU_CFG.TXT.  
 ![](img/NUTXT.png)
-2. For example, you can see Bridge_MODE and CMSIS-DAP options.
-* Set Bridge_MODE=1 then re-plug in USB cable, the pass-through bridge function of Nu-Link2-Pro will be enabled (The word Nu-Link2-Bridge will be used to represent the pass-through bridge application on Nu-Link2-Pro® adapter). Nu-Link2-Bridge pass-through the data between Nu-Link2-Bridge VCOM port and I2C/SPI/RS485/CAN interfaces.  
-(You will see an "Nu-Bridge2 Virtual Com Port" in device manager.)  
+2. For example, you can see BRIDGE_MODE and CMSIS-DAP options.
+* Set BRIDGE_MODE=1 then re-plug in USB cable, the pass-through bridge function of Nu-Link2-Pro will be enabled (The word Nu-Link2-Bridge will be used to represent the pass-through bridge application on Nu-Link2-Pro® adapter). Nu-Link2-Bridge pass-through the data between VCOM port and I2C/SPI/RS485/CAN interfaces.  
+(You will see an "Nu-Link2-Bridge Virtual Com Port" in device manager.)  
 ![](img/device_manager.png)
-* Set Bridge_MODE=0 then re-plug in USB cable, another bridge function will be enabled, we call it ISP-Bridge. ISP-Bridge doesn't pass through data, it communicates with ISPTool via HID_ISP, and offers I2C/SPI/RS485/CAN interfaces for ISPTool.  
+* Set BRIDGE_MODE=0 then re-plug in USB cable, an USB HID interface supports ISP Tool will be enabled. This USB HID interface doesn't pass through data, it communicates with ISPTool via HID_ISP, and offers I2C/SPI/RS485/CAN interfaces for ISPTool.  
 (You will see an USB HID interface [HID_ISP][VID:0x0416, PID:0x5203, interface:05] in device manager.)  
-(Note that Nu-Bridge and ISP-Bridge will not present at the same time, there is only one CON6 connector on Nu-Link2-Pro)  
 * Set CMSIS-DAP=1 then re-plug in USB cable, it presents one more interface HID_CMSIS-DAP, this is handy if you want to use CMSIS-DAP protocol.
 (You will see an USB HID interface [HID_CMSIS-DAP][VID:0x0416, PID:0x5203, interface:06] in device manager.)
 
@@ -62,7 +61,7 @@ More options for NuLink2FW (configuration file NU.TXT)
 #### [NuLink2FW.bin](./Latest_NuLink_Firmware)
 - Proprietary code 
 - Support NuMicro 8051, offline programming, user code read-out protection, unlimited flash break points, NuMicro chips specific features (config0/config1 dataflash setting, KPROM, etc.)
-- USB interfaces: HID_ICE(proprietary commands)/MSC/VCOM/HID_CMSIS-DAP/HID_ISP or VCOM_NuBridge (set in NU.TXT)
+- USB interfaces: HID_ICE(proprietary commands)/MSC/VCOM/HID_CMSIS-DAP/HID_ISP or VCOM_Nu-Link2-Bridge (set in NU_CFG.TXT)
 
 #### [NuLink2_DAPLink.bin](./Latest_NuLink_Firmware)
 - Open source: [DAPLink on Nu-Link2-Pro](https://github.com/OpenNuvoton/DapLink)  
