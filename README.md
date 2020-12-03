@@ -41,7 +41,7 @@ An overview picture of software tools, adapter and targets
 All Nu-Link2-Pro firmware binary files can be found [here](./Latest_NuLink_Firmware)  
 User can re-program Nu-Link2-Pro to another .bin file by the following instructions (Windows OS)  
 1. Press the button on Nu-Link2-Pro and plug in USB cable.
-2. A "Nu-Link2-Pro" disk will show.  (If you see disk name is "NuMicro MCU", it will upgrade DUT firmware instead of Nu-Link2-Pro itself) 
+2. A "Nu-Link2-Pro" disk will show.  (If you see disk name is "NuMicro MCU", it will upgrade target device firmware instead of Nu-Link2-Pro itself) 
 3. Drag and drop Nu-Link2-Pro firmware .bin file into the disk.
 4. Re-plug the USB cable and it's done.  
 
@@ -49,7 +49,7 @@ More options for NuLink2FW (configuration file NU_CFG.TXT)
 1. When you upgrade the NuLink2FW.bin larger than version v7143, open NU_CFG.TXT file in pop-up "NuMicro MCU" disk, you will see some options in NU_CFG.TXT.  
 ![](img/NUTXT.png)
 2. For example, you can see BRIDGE_MODE and CMSIS-DAP options.
-* Set BRIDGE_MODE=1 then re-plug in USB cable, the pass-through bridge function of Nu-Link2-Pro will be enabled (The word Nu-Link2-Bridge will be used to represent the pass-through bridge application on Nu-Link2-Pro® adapter). Nu-Link2-Bridge pass-through the data between VCOM port and I2C/SPI/RS485/CAN interfaces.  
+* Set BRIDGE_MODE=1 then re-plug in USB cable, the pass-through bridge function of Nu-Link2-Pro will be enabled (The word Nu-Link2-Bridge will be used to represent the pass-through bridge application on Nu-Link2-Pro adapter). Nu-Link2-Bridge pass-through the data between VCOM port and I2C/SPI/RS485/CAN interfaces.  
 (You will see an "Nu-Link2-Bridge Virtual Com Port" in device manager.)  
 ![](img/device_manager.png)
 * Set BRIDGE_MODE=0 then re-plug in USB cable, an USB HID interface supports ISP Tool will be enabled. This USB HID interface doesn't pass through data, it communicates with ISPTool via HID_ISP, and offers I2C/SPI/RS485/CAN interfaces for ISPTool.  
