@@ -21,7 +21,7 @@ NuTool: Coding assistant
 - [ClockConfigure installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200930114649)
 
 Signal pass-through/monitor (for I2C/SPI/CAN): 
-- [NuBridge2_Terminal](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320201109152640) 
+- [NuTool-USB-to-Serial-Port_Terminal](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320201109152640) 
 
 <br>
 <br>
