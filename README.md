@@ -13,15 +13,15 @@ Programmer
 - [ICPTool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181328)  
 - [ISPTool installer](https://www.nuvoton.com/opencms/resource-download.jsp?tp_GUID=SW0320101221101703)  
 - [ISPTool source code](https://github.com/OpenNuvoton/ISPTool)    
-- [ISPTool command set](./doc/NuMicro_ISP_Flow_And_Command_Set.pdf)    
+- [ISPTool command set document](./doc/NuMicro_ISP_Flow_And_Command_Set.pdf)    
 - [NuLink command tool installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181644)  
 
-NuTool: Coding assistant  
-- [PinConfigure installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200319135912)
-- [ClockConfigure installer](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200930114649)
+Coding assistant  
+- [NuTool-PinConfigure](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200319135912)
+- [NuTool-ClockConfigure](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320200930114649)
 
-Signal pass-through/monitor (for I2C/SPI/CAN): 
-- [NuTool-USB-to-Serial-Port_Terminal](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320201109152640) 
+Signal pass-through/monitor (I2C/SPI/CAN of Nu-Link2-Pro): 
+- [NuTool-USB_to_Serial_Port](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1320201210175128) 
 
 <br>
 <br>
@@ -53,9 +53,9 @@ More options for NuLink2FW (configuration file NU_CFG.TXT)
 (You will see an "Nu-Link2-Bridge Virtual Com Port" in device manager.)  
 ![](img/device_manager.png)
 * Set BRIDGE_MODE=0 then re-plug in USB cable, an USB HID interface supports ISP Tool will be enabled. This USB HID interface doesn't pass through data, it communicates with ISPTool via HID_ISP, and offers I2C/SPI/RS485/CAN interfaces for ISPTool.  
-(You will see an USB HID interface [HID_ISP][VID:0x0416, PID:0x5203, interface:05] in device manager.)  
+(You will see an USB HID interface [HID_ISP][VID:0x0416, PID:0x520*, interface:05] in device manager.)  
 * Set CMSIS-DAP=1 then re-plug in USB cable, it presents one more interface HID_CMSIS-DAP, this is handy if you want to use CMSIS-DAP protocol.
-(You will see an USB HID interface [HID_CMSIS-DAP][VID:0x0416, PID:0x5203, interface:06] in device manager.)
+(You will see an USB HID interface [HID_CMSIS-DAP][VID:0x0416, PID:0x520*, interface:06] in device manager.)
 
 ### Comparison of NuLink2FW.bin and NuLink2_DAPLink.bin  
 #### [NuLink2FW.bin](./Latest_NuLink_Firmware)
