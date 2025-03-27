@@ -1,0 +1,48 @@
+name: Update NuLink Firmware
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Run weekly on Sunday
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  update-firmware:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download NuLink Command Tool
+        run: |
+          $url = "https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181644"
+          Invoke-WebRequest -Uri $url -OutFile "NuLink.exe"
+        shell: pwsh
+
+      - name: Install NuLink Command Tool
+        run: |
+          Start-Process -FilePath ".\NuLink.exe" -ArgumentList "/S" -Wait
+        shell: pwsh
+
+      - name: Copy Firmware Files
+        run: |
+          $source = "C:\Program Files (x86)\Nuvoton Tools\NuLink Command Tool\Nu_Link"
+          $destination = "Latest_NuLink_Firmware"
+          
+          Copy-Item "$source\NuLink1FW.bin" -Destination $destination -Force
+          Copy-Item "$source\NuLink2FW.bin" -Destination $destination -Force
+        shell: pwsh
+
+      - name: Create Pull Request if changes
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: 'Update NuLink Firmware Files'
+          commit-message: 'chore: update NuLink firmware files'
+          branch: update-nulink-firmware
+          delete-branch: true
+          body: |
+            Automated update of NuLink firmware files from the official Nuvoton website.
+            
+            Changes:
+            - Updated NuLink1FW.bin
+            - Updated NuLink2FW.bin
