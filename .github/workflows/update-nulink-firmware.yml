@@ -3,7 +3,8 @@ name: Update NuLink Firmware
 on:
   schedule:
     - cron: '0 0 * * 0'  # Run weekly on Sunday
-  workflow_dispatch:  # Allow manual trigger
+  workflow_dispatch:
+    // ...existing code...
 
 jobs:
   update-firmware:
@@ -13,21 +14,33 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Download NuLink Command Tool
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        shell: pwsh
+
+      - name: Download and Extract NuLink Command Tool
         run: |
           $url = "https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW1720200221181644"
-          Invoke-WebRequest -Uri $url -OutFile "NuLink.exe"
+          Invoke-WebRequest -Uri $url -OutFile "NuLink.zip"
+          Expand-Archive -Path "NuLink.zip" -DestinationPath ".\NuLink_Extract" -Force
+          $installer = Get-ChildItem -Path ".\NuLink_Extract" -Filter "*.exe" -Recurse | Select-Object -First 1
+          Move-Item $installer.FullName ".\NuLink_Setup.exe"
         shell: pwsh
 
       - name: Install NuLink Command Tool
         run: |
-          Start-Process -FilePath ".\NuLink.exe" -ArgumentList "/S" -Wait
+          Start-Process -FilePath ".\NuLink_Setup.exe" -ArgumentList "/S" -Wait
         shell: pwsh
 
       - name: Copy Firmware Files
         run: |
           $source = "C:\Program Files (x86)\Nuvoton Tools\NuLink Command Tool\Nu_Link"
           $destination = "Latest_NuLink_Firmware"
+          
+          # Create destination directory if it doesn't exist
+          New-Item -ItemType Directory -Force -Path $destination
           
           Copy-Item "$source\NuLink1FW.bin" -Destination $destination -Force
           Copy-Item "$source\NuLink2FW.bin" -Destination $destination -Force
