@@ -4,7 +4,6 @@ on:
   schedule:
     - cron: '0 0 * * 0'  # Run weekly on Sunday
   workflow_dispatch:
-    // ...existing code...
 
 jobs:
   update-firmware:
