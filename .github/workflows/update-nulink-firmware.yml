@@ -30,7 +30,15 @@ jobs:
 
       - name: Install NuLink Command Tool
         run: |
-          Start-Process -FilePath ".\NuLink_Setup.exe" -ArgumentList "/VERYSILENT", '/DIR=".\NuLink"'          
+          #Start-Process -FilePath ".\NuLink_Setup.exe" -ArgumentList "/VERYSILENT", '/DIR=".\NuLink"'          
+          Start-Process -FilePath ".\NuLink_Setup.exe" -ArgumentList "/VERYSILENT"
+        shell: pwsh
+
+      - name: Search installation directory
+        run: |
+          Get-ChildItem -Path "C:\Program Files", "C:\Program Files (x86)", "$env:LOCALAPPDATA\Programs" -Directory -Recurse -ErrorAction SilentlyContinue |
+          Where-Object { $_.Name -like "*MyTool*" } |
+          Select-Object -ExpandProperty FullName
         shell: pwsh
 
       - name: Print working directory and installation folder
