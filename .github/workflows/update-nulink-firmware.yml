@@ -33,23 +33,23 @@ jobs:
           Start-Process -FilePath ".\NuLink_Setup.exe" -ArgumentList "/VERYSILENT", '/DIR=".\NuLink"'          
         shell: pwsh
 
-      - name: 🔍 Print working directory and installation folder
+      - name: Print working directory and installation folder
         run: |
-          # 1️⃣ 顯示目前所在工作目錄
-          Write-Host "📂 Current Working Directory:"
+          # 顯示目前所在工作目錄
+          Write-Host "Current Working Directory"
           Get-Location
       
-          # 2️⃣ 顯示目前目錄底下的所有檔案與資料夾
-          Write-Host "📄 Files in working directory:"
+          # 顯示目前目錄底下的所有檔案與資料夾
+          Write-Host "Files in working directory"
           Get-ChildItem -Path . -Recurse
       
-          # 3️⃣ 顯示你指定的安裝目錄，例如 C:\NuLink
+          # 顯示你指定的安裝目錄，例如 C:\NuLink
           $installPath = ".\NuLink"
           if (Test-Path $installPath) {
-            Write-Host "`n📂 Installed files under $installPath:"
+            Write-Host "Installed files under"
             Get-ChildItem -Path $installPath -Recurse
           } else {
-            Write-Host "`n⚠️ Installation directory $installPath not found."
+            Write-Host "Installation directory not found."
           }
         shell: pwsh
 
