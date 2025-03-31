@@ -30,7 +30,7 @@ jobs:
 
       - name: Install NuLink Command Tool
         run: |
-          Start-Process -FilePath ".\NuLink_Setup.exe /VERYSILENT" -Wait
+          Start-Process -FilePath ".\NuLink_Setup.exe" -Wait
         shell: pwsh
 
       - name: Copy Firmware Files
