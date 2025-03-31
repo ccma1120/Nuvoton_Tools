@@ -30,12 +30,12 @@ jobs:
 
       - name: Install NuLink Command Tool
         run: |
-          Start-Process -FilePath ".\NuLink_Setup.exe" -ArgumentList "/VERYSILENT", '/DIR="C:\NuLink"'          
+          Start-Process -FilePath ".\NuLink_Setup.exe" -ArgumentList "/VERYSILENT", '/DIR=".\NuLink"'          
         shell: pwsh
 
       - name: Copy Firmware Files
         run: |
-          $source = "C:\NuLink"
+          $source = ".\NuLink"
           $destination = "Latest_NuLink_Firmware"
           
           # Create destination directory if it doesn't exist
