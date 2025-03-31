@@ -41,8 +41,8 @@ jobs:
           # Create destination directory if it doesn't exist
           New-Item -ItemType Directory -Force -Path $destination
           
-          Copy-Item "$source\NuLink Command Tool\Nu_Link\NuLink1FW.bin" -Destination $destination -Force
-          Copy-Item "$source\NuLink Command Tool\Nu_Link\NuLink2FW.bin" -Destination $destination -Force
+          Copy-Item "$source\Nu_Link\NuLink1FW.bin" -Destination $destination -Force
+          Copy-Item "$source\Nu_Link\NuLink2FW.bin" -Destination $destination -Force
         shell: pwsh
 
       - name: Create Pull Request if changes
