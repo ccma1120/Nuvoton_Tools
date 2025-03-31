@@ -41,30 +41,12 @@ jobs:
           Select-Object -ExpandProperty FullName
         shell: pwsh
 
-      - name: Print working directory and installation folder
-        run: |
-          # 顯示目前所在工作目錄
-          Write-Host "Current Working Directory"
-          Get-Location
-      
-          # 顯示目前目錄底下的所有檔案與資料夾
-          Write-Host "Files in working directory"
-          Get-ChildItem -Path . -Recurse
-      
-          # 顯示你指定的安裝目錄，例如 C:\NuLink
-          $installPath = ".\NuLink"
-          if (Test-Path $installPath) {
-            Write-Host "Installed files under"
-            Get-ChildItem -Path $installPath -Recurse
-          } else {
-            Write-Host "Installation directory not found."
-          }
-        shell: pwsh
+
 
 
       - name: Copy Firmware Files
         run: |
-          $source = ".\NuLink"
+          $source = "C:\Program Files (x86)\Nuvoton Tools\NuLink Command Tool"
           $destination = "Latest_NuLink_Firmware"
           
           # Create destination directory if it doesn't exist
