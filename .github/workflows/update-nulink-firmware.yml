@@ -37,7 +37,7 @@ jobs:
       - name: Search installation directory
         run: |
           Get-ChildItem -Path "C:\Program Files", "C:\Program Files (x86)", "$env:LOCALAPPDATA\Programs" -Directory -Recurse -ErrorAction SilentlyContinue |
-          Where-Object { $_.Name -like "*MyTool*" } |
+          Where-Object { $_.Name -like "*NuLink*" } |
           Select-Object -ExpandProperty FullName
         shell: pwsh
 
