@@ -22,30 +22,25 @@ Users can reprogram Nu-Link3 with another .bin file using the following instruct
 4. Re-plug the USB cable and it's done.  
 
 #### More options for NuLink3FW (configuration file NU_CFG.TXT)   
-#### Warning: The meanings of the options for versions newer than v3.09.7380 are different from those in versions v3.05.7174r to v3.08.7313. For the old settings, please see the old [link](https://github.com/OpenNuvoton/Nuvoton_Tools/blob/70dcc9ce06c7d178160c84b870a49d4e9cbf5d1a/README.md).
-1. When you upgrade the NuLink3FW.bin to a version greater than or equal to v3.09.7380, you will see some options in NU_CFG.TXT.
+#### Note: In NuLink3, you won't see the BRIDGE MODE option from NuLink2, because with sufficient endpoints, all USB interfaces exist simultaneously.
+1. You will see some options in NU_CFG.TXT.
 * Open the NU_CFG.TXT file in the pop-up "NuMicro MCU" disk  
 <kbd>![](img/NUTXT.png)</kbd>
 
-2. For the Nu-Link3, you will see POWER-MODE and BRIDGE-MODE options. You need to re-plug in the USB cable to activate the setting.
+2. For the Nu-Link3, you will see POWER-MODE option. You need to re-plug in the USB cable to activate the setting.
 * Set POWER-MODE for SWD output voltage level (mainly for CMSIS-DAP interface use)
     
-* Set BRIDGE-MODE=0; this is the default setting. It has a WebUSB interface conforming to the CMSIS-DAP protocol, and you can connect to KEIL Studio Desktop/Cloud via this interface. Note that CMSIS-DAP will be disable in other BRIDGE-MODE (Limited USB endpoints).  
+* It has a WebUSB interface conforming to the CMSIS-DAP protocol, and you can connect to KEIL Studio Desktop/Cloud via this interface.  
 <kbd>![](img/7380_DEV_WEBUSB_2005.PNG)</kbd>
 
-* Set BRIDGE-MODE=1; the pass-through bridge function of Nu-Link3 will be enabled (The word Nu-Link2-Bridge will be used to represent the pass-through bridge application on Nu-Link3 adapter). Nu-Link2-Bridge pass-through the data between the VCOM port and I2C/SPI/RS485/CAN interfaces.
+* The pass-through bridge function of Nu-Link3 will be enabled (The word Nu-Link2-Bridge will be used to represent the pass-through bridge application on Nu-Link3 adapter). Nu-Link2-Bridge pass-through the data between the VCOM port and I2C/SPI/RS485/CAN interfaces.
     (You will see a "Nu-Link2-Bridge Virtual Com Port" in device manager.)
 <kbd>![](img/device_manager.png)</kbd>
 
-* Set BRIDGE-MODE=2; a USB HID interface that supports ISPTool will be enabled. This USB HID interface doesn't pass through data, it communicates with ISPTool via HID_ISP and offers I2C/SPI/RS485/CAN interfaces for ISPTool.
+* A USB HID interface that supports ISPTool will be enabled. This USB HID interface doesn't pass through data, it communicates with ISPTool via HID_ISP and offers I2C/SPI/RS485/CAN interfaces for ISPTool.
 
-* Set BRIDGE_MODE=3; a USB HID interface that supports Boot_Loader_ISPTool will be enabled. This USB HID interface doesn't pass through data, it communicates with Boot_Loader_ISPTool via HID_MKROM_ISP, and offers I2C/SPI/RS485/CAN interfaces for Boot_Loader_ISPTool. (this mode need the firmware later than v3.10)  
+* A USB HID interface that supports Boot_Loader_ISPTool will be enabled. This USB HID interface doesn't pass through data, it communicates with Boot_Loader_ISPTool via HID_MKROM_ISP, and offers I2C/SPI/RS485/CAN interfaces for Boot_Loader_ISPTool.  
 Only the NuMicro chip that supports mask ROM Boot Loader (e.g., M460 series) can commnuicate with [Boot_Loader_ISPTool](https://www.nuvoton.com/resource-download.jsp?tp_GUID=SW132022071806572776&currentFolder=/products/microcontrollers/arm-cortex-m4-mcus/m467-ethernet-crypto-series/)  
-
-3. If you use Nu-Link2-ME, it doesn't support BRIDGE functions, and you will only see the CMSIS-DAP option.
-* Set CMSIS-DAP=1; this is the default setting. It has a WebUSB interface conforming to the CMSIS-DAP protocol, and you can connect to KEIL Studio Desktop/Cloud via this interface.
-* Set CMSIS-DAP=0; it will disable CMSIS-DAP and enable the Nu-Link2 "USB BULK_ICE" interface (it's faster than "USB HID_ICE").
-
 
 
 <br>
