@@ -1,12 +1,14 @@
 # 我們的產品展示
 
-<iframe width="560" height="315" 
-    src="https://youtu.be/pQHlcYE8I7Y" 
+
+<iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/pQHlcYE8I7Y" 
     frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
 </iframe>
-
-
 
 # NdddduMicro software development tools  
 <br>
